@@ -37,9 +37,18 @@ const SideBar = ({ darkMode, setDarkMode }) => {
             )}
           </div>
         </div>
-        <div className='flex flex-col items-center'>
-          <div>Logout</div>
-          <div className='flex items-center justify-between text-sm'>
+        <div className='flex flex-col'>
+          <div className='flex gap-3 items-center'>
+            <div className=''>
+              <ExitToAppOutlinedIcon />
+            </div>
+            {expanded && (
+              <div className='flex'>
+                <p className='text-sm font-normal'>Log Out</p>
+              </div>
+            )}
+          </div>
+          <div className='flex items-center gap-4 text-sm'>
             {expanded && <LightModeOutlinedIcon />}
             {expanded && <p className='text-sm font-normal'>LightMode</p>}
 
