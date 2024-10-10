@@ -10,7 +10,12 @@ import ToggleOnOutlinedIcon from "@mui/icons-material/ToggleOnOutlined";
 import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 
-const SideBar = ({ darkMode, setDarkMode }) => {
+interface SideBarProps {
+  darkMode: boolean;
+  setDarkMode: (value: boolean) => void;
+}
+
+const SideBar = ({ darkMode, setDarkMode }: SideBarProps) => {
   const [expanded, setExpanded] = useState(true);
 
   const showSideBar = () => {
